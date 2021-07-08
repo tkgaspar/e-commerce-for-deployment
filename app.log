@@ -1,0 +1,52 @@
+2021-07-08 07:12:09.388  INFO 18568 --- [main] com.example.demo.SareetaApplication      : Starting SareetaApplication on Progi-apa with PID 18568 (started by Arpad in C:\Users\Arpad\OneDrive\Documents\Udacity java web development\nd035-c4-Security-and-DevOps 1)
+2021-07-08 07:12:09.396  INFO 18568 --- [main] com.example.demo.SareetaApplication      : No active profile set, falling back to default profiles: default
+2021-07-08 07:12:10.613  INFO 18568 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-07-08 07:12:10.704  INFO 18568 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77ms. Found 4 repository interfaces.
+2021-07-08 07:12:11.390  INFO 18568 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$782ac032] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-07-08 07:12:11.821  INFO 18568 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-07-08 07:12:11.853  INFO 18568 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-08 07:12:11.853  INFO 18568 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2021-07-08 07:12:12.065  INFO 18568 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-07-08 07:12:12.065  INFO 18568 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2563 ms
+2021-07-08 07:12:12.267  INFO 18568 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-07-08 07:12:12.448  INFO 18568 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-07-08 07:12:12.535  INFO 18568 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-07-08 07:12:12.617  INFO 18568 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2021-07-08 07:12:12.619  INFO 18568 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-07-08 07:12:12.868  INFO 18568 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-07-08 07:12:13.037  INFO 18568 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-07-08 07:12:13.910  INFO 18568 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-07-08 07:12:14.650  WARN 18568 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-07-08 07:12:14.749  INFO 18568 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@24f2608b, org.springframework.security.web.context.SecurityContextPersistenceFilter@6d45dd4, org.springframework.security.web.header.HeaderWriterFilter@6fad5ace, org.springframework.web.filter.CorsFilter@12a9e864, org.springframework.security.web.authentication.logout.LogoutFilter@8f589d7, com.example.demo.security.JWTAuthenticationFilter@462f8fe9, com.example.demo.security.JWTAuthenticationVerficationFilter@3c6fc4cd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1468fc85, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f8f5d37, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@b2e1df3, org.springframework.security.web.session.SessionManagementFilter@35f6f105, org.springframework.security.web.access.ExceptionTranslationFilter@1fa58a48, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7865cc83]
+2021-07-08 07:12:14.907  INFO 18568 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-07-08 07:12:15.172  INFO 18568 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-07-08 07:12:15.176  INFO 18568 --- [main] com.example.demo.SareetaApplication      : Started SareetaApplication in 6.36 seconds (JVM running for 6.994)
+2021-07-08 07:12:44.480  INFO 18568 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-08 07:12:44.481  INFO 18568 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-07-08 07:12:44.492  INFO 18568 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2021-07-08 07:12:44.633  INFO 18568 --- [http-nio-8080-exec-2] c.e.demo.controllers.UserController      : A new User has been created
+2021-07-08 07:12:55.268  INFO 18568 --- [http-nio-8080-exec-3] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2021-07-08 07:15:30.963  INFO 7268 --- [main] com.example.demo.SareetaApplication      : Starting SareetaApplication on Progi-apa with PID 7268 (started by Arpad in C:\Users\Arpad\OneDrive\Documents\Udacity java web development\nd035-c4-Security-and-DevOps 1)
+2021-07-08 07:15:30.966  INFO 7268 --- [main] com.example.demo.SareetaApplication      : No active profile set, falling back to default profiles: default
+2021-07-08 07:15:32.368  INFO 7268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-07-08 07:15:32.482  INFO 7268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98ms. Found 4 repository interfaces.
+2021-07-08 07:15:33.433  INFO 7268 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4c40cfb0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-07-08 07:15:34.021  INFO 7268 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-07-08 07:15:34.071  INFO 7268 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-08 07:15:34.073  INFO 7268 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+2021-07-08 07:15:34.337  INFO 7268 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-07-08 07:15:34.337  INFO 7268 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3249 ms
+2021-07-08 07:15:34.738  INFO 7268 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-07-08 07:15:34.945  INFO 7268 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-07-08 07:15:36.507  INFO 7268 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-07-08 07:15:37.264  WARN 7268 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-07-08 07:15:37.372  INFO 7268 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@60cc20e1, org.springframework.security.web.context.SecurityContextPersistenceFilter@7a0f43dc, org.springframework.security.web.header.HeaderWriterFilter@36885319, org.springframework.web.filter.CorsFilter@25109d84, org.springframework.security.web.authentication.logout.LogoutFilter@446f3a53, com.example.demo.security.JWTAuthenticationFilter@4a1934e2, com.example.demo.security.JWTAuthenticationVerficationFilter@6963b0bd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4f9980e1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c5d376c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@68a94e58, org.springframework.security.web.session.SessionManagementFilter@4bab804f, org.springframework.security.web.access.ExceptionTranslationFilter@46fdfaeb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4e31b64d]
+2021-07-08 07:15:37.547  INFO 7268 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-07-08 07:15:37.854  INFO 7268 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-07-08 07:15:37.857  INFO 7268 --- [main] com.example.demo.SareetaApplication      : Started SareetaApplication in 7.636 seconds (JVM running for 8.496)
+2021-07-08 07:15:51.652  INFO 7268 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-08 07:15:51.652  INFO 7268 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-07-08 07:15:51.692  INFO 7268 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 40 ms
+2021-07-08 07:15:51.875  INFO 7268 --- [http-nio-8080-exec-1] c.e.demo.controllers.UserController      : A new User has been created
