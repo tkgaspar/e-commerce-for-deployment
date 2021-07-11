@@ -5,7 +5,6 @@ import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,6 +24,12 @@ import com.example.demo.model.requests.CreateUserRequest;
 @RequestMapping("/api/user")
 public class UserController {
     private static final Logger log = LoggerFactory.getLogger(UserController.class);
+
+ public static void setLoggingLevel(ch.qos.logback.classic.Level level) {
+        ch.qos.logback.classic.Logger root = (ch.qos.logback.classic.Logger) org.slf4j.LoggerFactory.getLogger(ch.qos.logback.classic.Logger.ROOT_LOGGER_NAME);
+        root.setLevel(level);
+    }
+
     @Autowired
     private UserRepository userRepository;
 
@@ -49,18 +54,25 @@ public class UserController {
     public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
         User user = new User();
         user.setUsername(createUserRequest.getUsername());
-        log.info("A new User has been created", createUserRequest.getUsername());
-        log.debug("The username of the user created is {}",createUserRequest.getUsername());
         Cart cart = new Cart();
         cartRepository.save(cart);
         user.setCart(cart);
-        if (createUserRequest.getPassword().length() < 7 || !createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())) {
-            throw new UnsupportedOperationException();
-        }
-        user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
+        try {
+            if (createUserRequest.getPassword().length() < 7 || !createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())) {
+                log.info("Attempt to create user has failed");
+                return ResponseEntity.badRequest().build();
+            } else {
+                user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
+                userRepository.save(user);
+                log.info("A new User has been created {}", createUserRequest.getUsername());
+                setLoggingLevel(ch.qos.logback.classic.Level.DEBUG);
+                log.debug("The username of the user created is {}", createUserRequest.getUsername());
+            }
+        } catch (Exception e) {
+            log.error("A exception occured of the type {}", e);
 
-        userRepository.save(user);
+        }
         return ResponseEntity.ok(user);
     }
-
 }
+
