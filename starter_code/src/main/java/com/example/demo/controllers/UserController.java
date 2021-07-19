@@ -59,17 +59,17 @@ public class UserController {
         user.setCart(cart);
         try {
             if (createUserRequest.getPassword().length() < 7 || !createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())) {
-                log.info("Attempt to create user has failed");
+                log.info("|Attempt to create user has failed|");
                 return ResponseEntity.badRequest().build();
             } else {
                 user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
                 userRepository.save(user);
-                log.info("A new User has been created {}", createUserRequest.getUsername());
+                log.info("|A new User has been created| @{}@", createUserRequest.getUsername());
                 setLoggingLevel(ch.qos.logback.classic.Level.DEBUG);
-                log.debug("The username of the user created is {}", createUserRequest.getUsername());
+                log.debug("|The username of the user created is| @{}@", createUserRequest.getUsername());
             }
         } catch (Exception e) {
-            log.error("A exception occured of the type {}", e);
+            log.error("|An exception occured of the type| {}", e);
 
         }
         return ResponseEntity.ok(user);
